@@ -271,7 +271,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-03-28 21:32:31" itemprop="dateModified" datetime="2023-03-28T21:32:31+08:00">2023-03-28</time>
+                <time title="修改时间：2023-03-29 11:22:58" itemprop="dateModified" datetime="2023-03-29T11:22:58+08:00">2023-03-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -361,7 +361,7 @@
 <p>最后在nvboard上的效果如下：</p>
 <img src="/2023/03/27/ysyx%E9%A2%84%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A/436c8ef61aae442727f64bc7a9746a87.png" class>
 
-<h5 id="3-加法器与ALU"><a href="#3-加法器与ALU" class="headerlink" title="3.加法器与ALU"></a>3.加法器与ALU</h5><p>全加器我只接把之前学校数电实验的东西拿过来了。</p>
+<h5 id="3-加法器与ALU"><a href="#3-加法器与ALU" class="headerlink" title="3.加法器与ALU"></a>3.加法器与ALU</h5><p>全加器我直接把之前学校数电实验的东西拿过来了。</p>
 <figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">module</span> adder (</span><br><span class="line">    <span class="keyword">input</span> a,</span><br><span class="line">    <span class="keyword">input</span> b,</span><br><span class="line">    <span class="keyword">output</span> sum,</span><br><span class="line">    <span class="keyword">output</span> cout</span><br><span class="line">);</span><br><span class="line">    <span class="keyword">assign</span> &#123;cout, sum&#125; = a + b;</span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
 
 <p>ALU部分在折腾git的时候不小心弄丢了，还没保存，现在没办法展示了ORZ。</p>
@@ -416,6 +416,22 @@
 
 <p>这个函数会在cpu-exec.c中的trace_and_difftest函数中调用，每执行一条指令就检测是否有监视点被触发。</p>
 <p>至此PA1全部完成。</p>
+<hr>
+<h4 id="读后感"><a href="#读后感" class="headerlink" title="读后感"></a>读后感</h4><p>两篇文章都针对如何提问这点进行了阐述，《别像弱智一样提问》主要侧重于提问时需要注意的地方，如合适的描述问题，以及注意回答者（如果他真的愿意回答你）的情绪等等，而《提问的智慧》则更全面，按照小标题划分，大致可归纳为以下几点：</p>
+<ul>
+<li>在提问之前需要确定自己已尝试运用各种策略（如Google）解决问题</li>
+<li>提问时慎选提问的论坛，精确地描述问题，注意用词等</li>
+<li>解读答案的方式</li>
+</ul>
+<p>虽然看着的时候觉得这些都是基本的需要掌握的东西，不过根据现实经历，文章中出现的各种错误示范还是相当常见的（事实上我同学里面就有）。根据《提问的智慧》里提到的内容，好的提问应该具有以下特征：</p>
+<ul>
+<li>描述清晰、精确，提供了足够多的背景信息</li>
+<li>描述的问题是足够新颖的</li>
+<li>提问的语气、用词合适，没有掺杂与问题无关的内容</li>
+<li>是通过合适的渠道向回答者发送的</li>
+</ul>
+<p>对我个人而言，由于性格上的原因，实际上我很少向一个陌生人询问问题。在没有熟人能够帮助我解决问题的情况下，我是更倾向于自己一个人解决的。换句话说，不是万不得已，我不会去麻烦一个陌生人来解决我的问题，一是在交流问题细节的时候会顾虑很多，二来也是怕吃闭门羹。不过这样的习惯倒是培养了我自己独立解决问题的能力，通常来说我遇到的问题在搜索引擎上总能找到类似的问题，即使它们解决问题的方法没能对我的问题奏效，也能获得一些参考。早些时候我基本上还是只使用百度，但最近因为学习的东西变得相对不那么主流，我也发现在Google上搜索能够获得更多想要的结果。不过我或许天生就比较喜欢折腾，所以摸索未知的问题并没有给我带来什么痛苦，独立解决一个难题带来的成就感也是从别人那直接问到答案得不到的。刚上大学接触编程的两年里，总是觉得别人起步比我早，自己要追上去需要学习的东西太多，感到无力而迷茫。后来我想通了，不去尝试着学就连追上别人的希望都没有，然后也开始尝试着折腾linux，折腾一些神秘的开源项目，在这个过程中学到了不少东西，渐渐地在大佬讨论问题时也能听懂一些了。</p>
+<p>总而言之，读这两篇文章的体验是十分愉快的，里面举的一些错误范例也让人忍俊不禁。我自己也很讨厌别人问问题时描述不清不楚，或是带着很多无意义的话（跪求、急、救命之类的）。以后要是遇到这样的人，干脆就甩这两篇文章上去好了。以后自己也得多多注意，不能出现“像个弱智一样提问”的情况。</p>
 
       
     </div>
